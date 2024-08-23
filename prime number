@@ -1,0 +1,13 @@
+arr = [26, 28, 47, 26, 43, 51, 29]
+p= []
+for num in arr:
+    if num <= 1:
+        continue 
+    prime = True 
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            prime = False
+            break 
+    if prime:
+        p.append(num)
+print("Prime numbers in Array elements =", p)
